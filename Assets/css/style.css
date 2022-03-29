@@ -1,63 +1,44 @@
 *{
-    font-family:'Courier New', Courier, monospace;
-    background-color: var(--bg);
-  }
-
-:root{
-  --maroon:rgb(49, 52, 61);
-  --cyan: rgb(146, 203, 206);
-  --bg:rgb(238,238,247);
-}
-
-h2{
-  display:flex;
-  margin-right:50px;
-  padding-right:25px;
-  font-size:42px;
-  color:var(--maroon);
-  border-right: 4px solid var(--maroon);
+  font-family:'Courier New', Courier, monospace;
   background-color: var(--bg);
-
 }
-
+:root{
+--maroon:rgb(49, 52, 61);
+--cyan: rgb(146, 203, 206);
+--bg:rgb(238,238,247);
+}
+/* Header & Nav Bar */
 header{
     display:flex;
     justify-content:space-between ;
     background-color:var(--maroon);
-}
 
+}
 header h1{
   background-color:var(--cyan);
   padding-left:60px;
 }
-
 header nav{
   display:flex;
   margin-right:10px;
   align-items: center;
   list-style-type: none;
   background-color:var(--maroon);
-
 }  
-
+header h3{
+  background-color:var(--maroon);
+}
 header h3 a{
-  display:flex;
-  padding-right:20px;
-  justify-content: flex-end;
+  padding: 0 3px;
+  margin-right: 10px;
   font-weight:600;
   font-size:20px;
   background-color:var(--maroon);
   color:var(--cyan);
   border-bottom: 4px solid var(--cyan);
   text-decoration:inherit;
-
 }
-
- /* header:hover a{
-    transition:ease-in-out;
-    border-width: 5px;
-}  */
-
+/* Banner */
 div p{
  position:absolute;
  top:120px;
@@ -68,36 +49,44 @@ div p{
  text-decoration:inherit;
  background-color:var(--cyan);
 }
-
 div img{
-position:relative;
-width:100%;
-min-height:120px;
-height:auto;  
-z-index:0;
+  position:relative;
+  width:100%;
+  min-height:120px;
+  height:auto;  
+  z-index:0;
 }
+/* Sidebar */
+ aside{
+  display:inline;
+  justify-content: left;
 
-aside{
+} 
+h2{
   display:flex;
-  justify-content: flex-start;
+  padding-right:25px;
+  font-size:42px;
+  color:var(--maroon);
+  border-right: 4px solid var(--maroon);
   background-color: var(--bg);
+  }
+/* About Me Paragraphs */
+#aboutMe{
+display:flex;
+flex-direction: row;
+flex-wrap:wrap;
 }
-
-aside p{
-  background-color: var(--bg);
+#aboutMe p{
 
 }
-
 content{
   display:flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content:flex-start;
   background-color: var(--bg);
-  
-
 }
-
+/* Project Images */
 #project{
   position:relative;
   display:flex;
@@ -155,7 +144,7 @@ content{
   margin-top:21px;
   margin-left:21px;
  }
-
+/* Footer Nav */
 footer{
   display:flex;
   align-items:center;
@@ -194,7 +183,7 @@ footer li a{
   text-decoration:inherit;
   margin-right:30px;
 }
-
+/* Media Queries */
 @media (max-width: 480px) {
   #project {
   flex-direction: column;
