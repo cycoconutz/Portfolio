@@ -56,47 +56,79 @@ div img{
   height:auto;  
   z-index:0;
 }
-/* Sidebar */
- aside{
-  display:inline;
-  justify-content: left;
-
+/* Main Content */
+.column{
+  flex-direction: column;
+}
+main{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--bg);
+}
+/* About Me */
+#aboutMe{
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+aside{
+  display: flex;
+  width: 15%;
+  flex-wrap:wrap;
+  justify-content: end;
+  padding-right: 8px;
+  margin-left:1%;
 } 
 h2{
   display:flex;
+  align-items: center;
   padding-right:25px;
   font-size:42px;
   color:var(--maroon);
   border-right: 4px solid var(--maroon);
   background-color: var(--bg);
   }
-/* About Me Paragraphs */
-#aboutMe{
-display:flex;
-flex-direction: row;
-flex-wrap:wrap;
+.text{
+  text-indent:40px;
+  display: flex;
+  width: 80%;
+  font-size: 22px;
+  flex-wrap: wrap;
+  padding-left: 14px;
 }
-#aboutMe p{
 
-}
-content{
-  display:flex;
+/* Work */
+#work{
+  display: flex;
+  position: relative;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content:flex-start;
-  background-color: var(--bg);
 }
-/* Project Images */
+#bigpic{
+  position:relative;
+  display:flex;
+  max-width: 70%;
+  flex-grow:1;
+  border: 6px solid lightgray;
+}
+#projpics{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: start;
+  max-width: 80%;
+  padding-left:5px;
+}
 #project{
   position:relative;
   display:flex;
-  max-width: 500px;
-  max-height: 400px;
-  flex:1 0 400px;
+  max-width: 300px;
   flex-direction:row;
   border: 6px solid lightgray;
   background-color: var(--bg);
-  margin:15px;
 }
 
 #projlab1{
@@ -146,31 +178,29 @@ content{
  }
 /* Footer Nav */
 footer{
-  display:flex;
-  align-items:center;
-  justify-content: flex-end;
-}
+  max-height: 15px;
+  flex-wrap: wrap;
+  display: flex;  
+  width:100%;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
 
-footer h2{
-  display:flex;
-  border-right: 4px solid var(--maroon);
-  font-size:42px;
-  margin-right:50px;
-  padding-right:25px;
-  color:var(--maroon);
-  
 }
-
+#contact{
+  display: flex;
+  width: 15%;
+  flex-wrap:wrap;
+  padding-right: 8px;
+  margin-left:1%;
+}
 footer ul{
   align-items: center;
   display:flex;
   flex-direction: row;
-  flex-wrap:nowrap;
   gap:20px;
   list-style-type: none;
-  margin-right:30px;
-
-
 }
 
 footer li a{
@@ -184,18 +214,51 @@ footer li a{
   margin-right:30px;
 }
 /* Media Queries */
-@media (max-width: 480px) {
-  #project {
-  flex-direction: column;
+@media screen and (max-width: 820px) {
+ header h1{
+   max-height: 70px;
   }
+  header nav {
+    flex-direction: column;
   }
-  @media (max-width: 600px) {
-  .project {
-  flex: 1 46%;
+  div{
+    display:none;
   }
+  aside{
+  flex-direction:column;
   }
-  @media (max-width: 920px) {
-  .project {
-  flex: 1 21%;
+  h2 {
+      text-align:center;
+      font-size:175%;
+      padding-right:3px;
+      border:none;
+      border-bottom: 3px solid var(--maroon);
   }
+  #bigpic{
+  flex-grow:1;
   }
+  .text{
+  font-size: 12px;
+  }
+  body{
+    display:flex;
+    flex-direction:column;
+    width:20%;
+  }
+  footer ul{
+    flex-direction: column;
+  }
+  
+}
+
+@media screen and (max-width: 911px) {
+
+  div {
+    margin-top:2em;
+  }
+
+  #problab1 #projlab2 #projlab3 #projlab4 {
+    flex-direction: column;
+    max-width:100%;
+  }
+}
