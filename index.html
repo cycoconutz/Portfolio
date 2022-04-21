@@ -5,27 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./Assets/css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./Assets/css/style.css">
     <link rel="script" href="./Assets/js/script.js">
     <title>Danny Yates Portfolio</title>
 </head>
 
 <body>
-    <header>
-        <h1>Danny Yates</h1>
-        <nav>
+    <header class="container-fluid row">
+        <h1 class="col-lg-2 col-12">Danny Yates</h1>
+        <nav class="col-lg-9 col-12 justify-content-end">
             <h3><a href="#aboutMe">About Me</a></h3>
             <h3><a href="#work">Work</a></h3>
             <h3><a href="https://github.com/cycoconutz" target=" " _blank">Resume</a></h3>
             <h3><a href="#contact">Contact</a></h3>
         </nav>
     </header>
-    <div>
-        <img src="./Assets/img/headersplash2.jpg" alt="Header splash image of bumpy texture">
-        <p id="splashtxt">Web Developer</p><img id="profilePic" src="./Assets/img/shrunkprofile.jpg" alt="My Face">
+    <div class="container-fluid row">
+        <img id='splash-banner' class='col-12 col-lg-12 img-fluid' src="./Assets/img/headersplash2.jpg"
+            alt="Header splash image of bumpy texture">
+        <p id="splashtxt" class='col-lg-8 position-absolute end-0 img-fluid'>Web Developer</p>
+        <img id="profilePic" class='' src="./Assets/img/shrunkprofile.jpg" alt="My Face">
     </div>
-    <main class="column">
+    <main class="container-fluid ">
         <section id="aboutMe">
             <aside>
                 <h2>
@@ -33,20 +36,16 @@
                 </h2>
             </aside>
             <p class="text">
-                Bacon ipsum dolor amet brisket drumstick ipsum in, strip steak boudin aliquip culpa doner. Deserunt
-                cupim adipisicing meatball, pork chop kielbasa strip steak pariatur salami ut do aute venison enim.
-                Shank cupim beef non, flank ad irure cow. Chuck dolore burgdoggen, cupidatat sirloin dolore rump
-                pariatur alcatra nulla voluptate pork loin biltong capicola. Short ribs fugiat nostrud jowl prosciutto
-                sirloin. Ut corned beef landjaeger ut sed shankle pork veniam capicola est pork loin qui prosciutto
-                jerky.
+                Hello, my name is Danny Yates and I am a web developer. I am attending the University of Texas at Austin
+                Coding Bootcamp currently, and would love to work on your project! My current proficiencies are: HTML,
+                CSS, JS, JQuery, NodeJS, Bootstrap, and Materialize.
 
                 <br>
                 <br>
 
-                Brisket ullamco burgdoggen nostrud shankle dolor salami bacon cupidatat deserunt non cow consectetur
-                laboris. Eu reprehenderit adipisicing, exercitation prosciutto voluptate andouille laborum strip steak
-                commodo short loin consectetur minim bresaola pancetta. Et drumstick leberkas, tongue tri-tip turkey
-                fugiat laborum ham ex andouille. Pork loin excepteur in non pork chop, pancetta pig sausage laboris.
+                If you have a project you're interested in taking to the next level please check out my portfolio to see
+                some of my work. If you have any questions or think we could work together my contact info is located
+                below.
 
             </p>
         </section>
@@ -56,26 +55,26 @@
                     Work
                 </h2>
             </aside>
-            <content id="projpics">
+            <content id="projpics" class="">
                 <a href="https://cycoconutz.github.io/Project-1/">
                     <div id="projlab1">Cocktail & Sports API</div><img src="./Assets/img/hero.png"
                         alt="Computer Motherboard" id="bigpic">
                 </a>
                 <a href="https://github.com/cycoconutz">
                     <div id="projlab2">Code Spagettify-er</div><img src="./Assets/img/proj2.jpg"
-                        alt="Laptop Coding Screen" id="project">
+                        alt="Laptop Coding Screen" class="project">
                 </a>
                 <a href="https://github.com/cycoconutz">
                     <div id="projlab4">Life Distractor</div><img src="./Assets/img/proj4.jpg" alt="Smart Watch"
-                        id="project">
+                        class="project">
                 </a>
                 <a href="https://github.com/cycoconutz">
                     <div id="projlab3">Self Un-Learning AI</div><img src="./Assets/img/proj3.jpg" alt="Neon Matrix"
-                        id="project">
+                        class="project">
                 </a>
                 <a href="https://github.com/cycoconutz">
                     <div id="projlab3">Advanced Computing</div><img src="./Assets/img/proj5.jpg" alt="Neural Net"
-                        id="project">
+                        class="project">
                 </a>
             </content>
         </section>
@@ -92,6 +91,7 @@
             </ul>
         </footer>
         </content>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
